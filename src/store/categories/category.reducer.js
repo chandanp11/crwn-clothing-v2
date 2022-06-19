@@ -14,7 +14,7 @@ export const categoriesReducer = (
     case CATEGORIES_ACTION_TYPES.SET_CATEGORIES:
       return { ...state, categories: payload };
 
-      default:
-          return state;
+    default:
+      return state;
   }
 };

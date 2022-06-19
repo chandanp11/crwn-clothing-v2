@@ -20,9 +20,9 @@ render(
     <Provider store={store}>
       <BrowserRouter>
         {/* <CategoriesProvider> */}
-          <CartProvider>
+          {/* <CartProvider> */}
             <App />
-          </CartProvider>
+          {/* </CartProvider> */}
         {/* </CategoriesProvider> */}
       </BrowserRouter>
     </Provider>

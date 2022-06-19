@@ -5,7 +5,8 @@ import { useSelector } from "react-redux";
 import CartIcon from "../../components/cart-icon/cart-icon.component";
 import CartDropdown from "../../components/cart-dropdown/cart-dropdown.component";
 
-import { CartContext } from "../../contexts/cart.context";
+import { selectIsCartOpen } from "../../store/cart/cart.selector";
+// import { CartContext } from "../../contexts/cart.context";
 // import { UserContext } from "../../contexts/user.context";
 import { selectCurrentUser } from "../../store/user/user.selector";
 
@@ -20,15 +21,13 @@ import {
   NavLink,
 } from "./navigation.styles";
 
-
-
 const Navigation = () => {
   // const { currentUser } = useContext(UserContext);
-  const currentUser = useSelector(selectCurrentUser)
-  
-  const { isCartOpen } = useContext(CartContext);
-  
-  
+  const currentUser = useSelector(selectCurrentUser);
+
+  // const { isCartOpen } = useContext(CartContext);
+  const isCartOpen = useSelector(selectIsCartOpen);
+
   // const { currentUser, setCurrentUser } = useContext(UserContext);
   // console.log(currentUser);
 
